@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght,MONO@0,300..800,1;1,300..800,1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import "tailwindcss";
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+.font-code {
+  font-family: "Google Sans Code", monospace;
+}
+
+:root {
+  --purple-950: #10002b;
+  --purple-900: #240046;
+  --purple-800: #3c096c;
+  --purple-700: #5a189a;
+  --purple-600: #7b2cbf;
+  --purple-500: #9d4edd;
+  --purple-400: #c77dff;
+  --purple-300: #e0aaff;
+}
