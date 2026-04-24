@@ -30,7 +30,7 @@ const TerminalCard = () => {
         <p>
           <span className="text-blue-400">$</span> skills
         </p>
-        <p className="text-white">Next.js, GSAP, AI</p>
+        <p className="text-white">React, Node.js, Express, MongoDB, MySQL</p>
 
         <p>
           <span className="text-blue-400">$</span> passionate
@@ -87,7 +87,7 @@ export default TerminalCard;
 //         <p>
 //           <span className="text-blue-600">$</span> skills
 //         </p>
-//         <p className="text-neutral-900">Next.js, GSAP, AI</p>
+//         <p className="text-neutral-900">React, Node.js, Express, MongoDB, MySQL</p>
 
 //         <p>
 //           <span className="text-blue-600">$</span> passionate
