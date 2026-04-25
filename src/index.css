@@ -1,5 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght,MONO@0,300..800,1;1,300..800,1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght,MONO@0,300..800,1;1,300..800,1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playball&display=swap');
+
 @import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
 
 body {
   font-family: "Inter", sans-serif;
@@ -7,6 +10,14 @@ body {
 
 .font-code {
   font-family: "Google Sans Code", monospace;
+}
+
+.font-cursive {
+  font-family: "Kaushan Script", cursive;
+}
+
+.font-playball {
+  font-family: "Playball", cursive;
 }
 
 :root {
@@ -18,4 +29,22 @@ body {
   --purple-500: #9d4edd;
   --purple-400: #c77dff;
   --purple-300: #e0aaff;
+  --purple-200: #edd1ff;
+  --purple-100: #f5e6ff;
+  --purple-50: #fbf5ff;
+}
+
+@keyframes floatDown {
+  0%, 100% {
+    transform: translateY(0);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translateY(8px);
+    opacity: 1;
+  }
+}
+
+.animate-floatDown {
+  animation: floatDown 2s ease-in-out infinite;
 }
