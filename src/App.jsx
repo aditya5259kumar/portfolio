@@ -3,7 +3,7 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Bg from "./components/bg";
 import { useSelector } from "react-redux";
-import pixies from "./assets/pixies.m4a";
+import resonance from "./assets/resonance.m4a";
 
 const App = () => {
   const theme = useSelector((store) => store.theme.theme);
@@ -15,7 +15,7 @@ const App = () => {
   }, [theme]);
 
   const [audio] = useState(() => {
-    const a = new Audio(pixies);
+    const a = new Audio(resonance);
     a.loop = true;
     a.volume = 0.2;
     return a;
