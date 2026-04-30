@@ -10,7 +10,7 @@ import { IoArrowForward } from "react-icons/io5";
 
 const Home = () => {
   return (
-    <section className="pt-34 lg:pt-38 ">
+    <section id="home" className="pt-34 lg:pt-38 ">
       <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-12 xl:px-0 md:flex-row flex-col flex md:items-center justify-between gap-y-12 md:gap-x-8 gap-x-12">
         <div className="flex-1 flex flex-col items-center md:items-start">
           <span
@@ -29,7 +29,7 @@ const Home = () => {
           >
             Available for Opportunities
           </span>
-          <h1 className="text-gray-800 dark:text-white text-5xl md:text-6xl lg:text-7xl md:my-6 my-4 font-extrabold">
+          <h1 className="text-gray-800 dark:text-white text-6xl md:text-6xl lg:text-7xl md:my-6 my-4 font-extrabold">
             Full Stack{" "}
             <span className="text-center md:text-start font-playball block tracking-tighter bg-linear-to-b from-black dark:from-neutral-50  via-(--purple-800) dark:via-(--purple-200) to-(--purple-400) dark:to-(--purple-600) bg-clip-text text-transparent">
               Developer
@@ -50,7 +50,7 @@ const Home = () => {
             repeat={Infinity}
             className="text-(--purple-500) text-[22px] my-2 md:text-3xl font-bold"
           />
-          <p className="text-base md:text-lg px-4 md:pl-0 md:pr-4 font-semibold text-gray-500/80 dark:text-gray-400 md:mt-6 mt-4 mb-8 text-center md:text-start">
+          <p className="md:text-lg px-4 md:pl-0 md:pr-4 text-base text-gray-600 dark:text-gray-300 leading-relaxed md:mt-6 mt-4 mb-8 text-center md:text-start">
             I'm{" "}
             <span className="font-bold text-gray-700 dark:text-white">
               Aditya Kumar
@@ -68,10 +68,9 @@ text-sm md:text-base font-medium
 rounded-lg text-white
 bg-linear-to-r from-(--purple-800) dark:from-(--purple-700) to-(--purple-500)
 shadow-[0_4px_14px_rgba(123,44,191,0.4)]
-transition-all duration-200
-"
+transition-all duration-200 cursor-pointer"
             >
-              <span>View My Work</span>{" "}
+              <span>View Projects</span>{" "}
               <IoArrowForward className="font-bold -rotate-45 md:text-lg text-base" />
             </button>
             <button
@@ -92,7 +91,7 @@ dark:bg-(--purple-900)
 hover:bg-(--purple-200)
 dark:hover:bg-(--purple-800)
 
-transition-all duration-200
+transition-all duration-200 cursor-pointer
 "
             >
               <span>Get Resume</span>{" "}

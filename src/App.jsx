@@ -4,6 +4,8 @@ import Home from "./pages/Home";
 import Bg from "./components/bg";
 import { useSelector } from "react-redux";
 import resonance from "./assets/resonance.m4a";
+import About from "./pages/About";
+import Skills from "./pages/Skills";
 
 const App = () => {
   const theme = useSelector((store) => store.theme.theme);
@@ -40,6 +42,8 @@ const App = () => {
       <div className="relative z-10">
         <Navbar />
         <Home />
+        <About />
+        <Skills />
       </div>
     </div>
   );
