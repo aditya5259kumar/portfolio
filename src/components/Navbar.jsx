@@ -32,31 +32,31 @@ const Navbar = () => {
           {logo}
         </div>
 
-        <div className="lg:flex hidden space-x-7.5 text-gray-500 dark:text-gray-400 text-sm">
-          <span className="flex items-center gap-1 hover:text-(--purple-500) dark:hover:text-(--purple-400) transition-all">
+        <div className="md:flex hidden space-x-7.5 text-gray-500 dark:text-gray-400 text-sm">
+          <a href="#home" className="flex items-center gap-1 hover:text-(--purple-500) dark:hover:text-(--purple-400) transition-all">
             <BiHomeAlt className="text-[16px]" />
-            <a href="#home">Home</a>
-          </span>
-          <span className="flex items-center gap-1 hover:text-(--purple-500) dark:hover:text-(--purple-400) transition-all">
+            <span>Home</span>
+          </a>
+          <a href="#about" className="flex items-center gap-1 hover:text-(--purple-500) dark:hover:text-(--purple-400) transition-all">
             <BiUser className="text-[16px]" />
-            <a href="#about">About</a>
-          </span>
-          <span className="flex items-center gap-1 hover:text-(--purple-500) dark:hover:text-(--purple-400) transition-all">
+            <span>About</span>
+          </a>
+          <a href="#skills" className="flex items-center gap-1 hover:text-(--purple-500) dark:hover:text-(--purple-400) transition-all">
             <BiCode className="text-[16px]" />
-            <a href="#skills">Skills</a>
-          </span>
-          <span className="flex items-center gap-1 hover:text-(--purple-500) dark:hover:text-(--purple-400) transition-all">
+            <span>Skills</span>
+          </a>
+          <a href="#projects" className="flex items-center gap-1 hover:text-(--purple-500) dark:hover:text-(--purple-400) transition-all">
             <BiBriefcaseAlt className="text-[16px]" />
-            <a href="#projects">Projects</a>
-          </span>
-          <span className="flex items-center gap-1 hover:text-(--purple-500) dark:hover:text-(--purple-400) transition-all">
+            <span>Projects</span>
+          </a>
+          {/* <a href="#experience" className="flex items-center gap-1 hover:text-(--purple-500) dark:hover:text-(--purple-400) transition-all">
             <BiAward className="text-[16px]" />
-            <a href="#experience">Experience</a>
-          </span>
-          <span className="flex items-center gap-1 hover:text-(--purple-500) dark:hover:text-(--purple-400) transition-all">
+            <span >Experience</span>
+          </a> */}
+          <a href="#contact" className="flex items-center gap-1 hover:text-(--purple-500) dark:hover:text-(--purple-400) transition-all">
             <BiEnvelope className="text-[16px]" />
-            <a href="#contact">Contact</a>
-          </span>
+            <span>Contact</span>
+          </a>
         </div>
 
         <div className="flex items-center space-x-4">
@@ -64,7 +64,7 @@ const Navbar = () => {
             onClick={() => dispatch(toggleMusic())}
             className={`hover:bg-(--purple-200)/50 dark:hover:bg-(--purple-700)/50 cursor-pointer p-2 rounded-full  ${
               isPlaying
-                ? "dark:text-purple-400 text-purple-600 bg-(--purple-200)/50 dark:bg-(--purple-700)/50"
+                ? "dark:text-(--purple-400) text-(--purple-400) bg-(--purple-200)/50 dark:bg-(--purple-700)/50"
                 : "text-gray-500"
             }`}
           >
@@ -79,7 +79,7 @@ const Navbar = () => {
 
           <span
             onClick={toggleMobileView}
-            className=" hover:bg-(--purple-200)/50 dark:hover:bg-(--purple-700)/50 block lg:hidden text-gray-500 dark:text-gray-400/80 text-xl cursor-pointer p-2 rounded-full"
+            className=" hover:bg-(--purple-200)/50 dark:hover:bg-(--purple-700)/50 block md:hidden text-gray-500 dark:text-gray-400/80 text-xl cursor-pointer p-2 rounded-full"
           >
             {mobileView ? <RxCross2 /> : <HiMiniBars2 />}
           </span>
@@ -89,30 +89,33 @@ const Navbar = () => {
       {mobileView && (
         <div className="mt-4 max-w-7xl mx-auto py-3 px-4 rounded-xl dark:bg-(--purple-950)/60 bg-(--purple-50)/60 backdrop-blur-md md:flex lg:hidden items-center justify-between border border-neutral-300/80 dark:border-neutral-700/80">
           <div className="flex flex-col py-3 px-4 rounded-xl space-y-6 text-gray-500 dark:text-gray-400 text-sm">
-            <span className="cursor-pointer flex items-center gap-1 hover:text-(--purple-500) dark:hover:text-(--purple-400) transition-all">
+            <a href="#home" className="cursor-pointer flex items-center gap-1 hover:text-(--purple-500) dark:hover:text-(--purple-400) transition-all">
               <BiHomeAlt className="text-[16px]" />
-              <a href="#home">Home</a>
-            </span>
-            <span className="cursor-pointer flex items-center gap-1 hover:text-(--purple-500) dark:hover:text-(--purple-400) transition-all">
+              <span >Home</span>
+            </a>
+            <a href="#about" className="cursor-pointer flex items-center gap-1 hover:text-(--purple-500) dark:hover:text-(--purple-400) transition-all">
               <BiUser className="text-[16px]" />
-              <a href="#about">About</a>
-            </span>
-            <span className="cursor-pointer flex items-center gap-1 hover:text-(--purple-500) dark:hover:text-(--purple-400) transition-all">
+              <span >About</span>
+            </a>
+            <a href="#skills" className="cursor-pointer flex items-center gap-1 hover:text-(--purple-500) dark:hover:text-(--purple-400) transition-all">
               <BiCode className="text-[16px]" />
-              <a href="#skills">Skills</a>
-            </span>
-            <span className="cursor-pointer flex items-center gap-1 hover:text-(--purple-500) dark:hover:text-(--purple-400) transition-all">
+              <span >Skills</span>
+            </a>
+            <a href="#projects" className="cursor-pointer flex items-center gap-1 hover:text-(--purple-500) dark:hover:text-(--purple-400) transition-all">
               <BiBriefcaseAlt className="text-[16px]" />
-              <a href="#projects">Projects</a>
-            </span>
-            <span className="cursor-pointer flex items-center gap-1 hover:text-(--purple-500) dark:hover:text-(--purple-400) transition-all">
+              <span >Projects</span>
+            </a>
+            {/* <a href="#experience" className="cursor-pointer flex items-center gap-1 hover:text-(--purple-500) dark:hover:text-(--purple-400) transition-all">
               <BiAward className="text-[16px]" />
-              <a href="#experience">Experience</a>
-            </span>
-            <span className="cursor-pointer flex items-center gap-1 hover:text-(--purple-500) dark:hover:text-(--purple-400) transition-all">
+              <span >Experience</span>
+            </a> */}
+            <a
+              href="#contact"
+              className="cursor-pointer flex items-center gap-1 hover:text-(--purple-500) dark:hover:text-(--purple-400) transition-all"
+            >
               <BiEnvelope className="text-[16px]" />
-              <a href="#contact">Contact</a>
-            </span>
+              <span>Contact</span>
+            </a>
           </div>
         </div>
       )}

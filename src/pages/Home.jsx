@@ -14,7 +14,7 @@ const Home = () => {
       <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-12 xl:px-0 md:flex-row flex-col flex md:items-center justify-between gap-y-12 md:gap-x-8 gap-x-12">
         <div className="flex-1 flex flex-col items-center md:items-start">
           <span
-            class="
+            className="
   mb-2 text-xs w-fit px-4 py-1.5 md:py-2 rounded-full
 
   bg-(--purple-100) 
@@ -23,8 +23,8 @@ const Home = () => {
   dark:bg-(--purple-900)
   dark:text-(--purple-300)
   dark:border-(--purple-700)
-    shadow-[0_4px_12px_rgba(123,44,191,0.15)]
-   dark:shadow-[0_4px_12px_rgba(0,0,0,0.4)]
+  shadow-lg
+  shadow-gray-300 dark:shadow-gray-700
 "
           >
             Available for Opportunities
@@ -67,7 +67,8 @@ px-4 py-3 md:px-6 md:py-3
 text-sm md:text-base font-medium
 rounded-lg text-white
 bg-linear-to-r from-(--purple-800) dark:from-(--purple-700) to-(--purple-500)
-shadow-[0_4px_14px_rgba(123,44,191,0.4)]
+shadow-lg
+  shadow-gray-300 dark:shadow-gray-700
 transition-all duration-200 cursor-pointer"
             >
               <span>View Projects</span>{" "}
