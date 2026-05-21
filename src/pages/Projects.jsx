@@ -1,4 +1,5 @@
 import React from "react";
+import { IoArrowForward } from "react-icons/io5";
 import ProjectCard from "../components/ProjectCard";
 import { projects } from "../data";
 
@@ -20,11 +21,19 @@ const Projects = () => {
           </p>
         </div>
 
-        <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3">
+        <div className="grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2">
           {projects.map((project) => (
             <ProjectCard key={project.id} project={project} />
           ))}
         </div>
+        <a
+          target="_blank"
+          href="https://github.com/aditya5259kumar?tab=repositories"
+          className="flex group items-center underline underline-offset-6 justify-center mt-8 md:mt-12 mx-auto dark:text-white"
+        >
+          View all projects on GitHub{" "}
+          <IoArrowForward className="font-bold -rotate-45 group-hover:rotate-0 transition-all ease-in-out md:text-lg text-base" />
+        </a>
       </div>
     </section>
   );

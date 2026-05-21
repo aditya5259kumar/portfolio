@@ -172,14 +172,23 @@ const Contact = () => {
             <div className="flex flex-col gap-4">
               {contactItems.map((item) => {
                 const Icon = item.icon;
+                const isClickable = Boolean(item.url);
                 return (
                   <div
                     key={item.id}
-                    className="py-3 px-4 flex items-center gap-4 border border-neutral-300/80 dark:border-neutral-700/80 rounded-xl dark:bg-(--purple-950)/60 bg-(--purple-50)/60 backdrop-blur-md"
+                    // rel={isClickable ? "noopener noreferrer" : undefined}
+                    className="py-3 px-4 flex items-center gap-4 border border-neutral-300/80 dark:border-neutral-700/80 rounded-xl dark:bg-(--purple-950)/60 bg-(--purple-50)/60 backdrop-blur-md ${
+                      "
                   >
-                    <span className="p-3 rounded-full bg-(--purple-200) dark:bg-(--purple-800) text-(--purple-700) dark:text-(--purple-300)">
+                    <a
+                      href={item.url || undefined}
+                      target="_blank"
+                      rel={isClickable ? "noopener noreferrer" : undefined}
+                      className="p-3 rounded-full bg-(--purple-200) dark:bg-(--purple-800) text-(--purple-700) dark:text-(--purple-300)"
+                    >
                       <Icon className="text-[20px]" />
-                    </span>
+                    </a>
+
                     <div>
                       <span className="font-semibold dark:text-white ">
                         {item.title}

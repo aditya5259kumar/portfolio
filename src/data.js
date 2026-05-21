@@ -82,18 +82,21 @@ export const contactItems = [
     title: "Github",
     value: "github.com/aditya5259kumar",
     icon: FaGithub,
+    url: "https://github.com/aditya5259kumar",
   },
   {
     id: 2,
     title: "LinkedIn",
     value: "www.linkedin.com/in/aditya5259kumar/",
     icon: FaLinkedinIn,
+    url: "https://www.linkedin.com/in/aditya5259kumar/",
   },
   {
     id: 3,
     title: "Email",
     value: "aditya5259kumar@gmail.com",
     icon: BiEnvelope,
+    url: "https://mail.google.com/mail/?view=cm&fs=1&to=aditya5259kumar@gmail.com"
   },
   {
     id: 4,

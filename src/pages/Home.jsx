@@ -48,13 +48,13 @@ const Home = () => {
           </p>
 
           <div className="flex items-center space-x-4  ">
-            <button
+            <a
               href="#projects"
               className="flex items-center gap-2 px-4 py-3 md:px-6 md:py-3 bg-linear-to-r from-(--purple-800) dark:from-(--purple-700) to-(--purple-500) text-sm md:text-base font-medium rounded-lg text-white cursor-pointer"
             >
               <span>View Projects</span>{" "}
               <IoArrowForward className="font-bold -rotate-45 md:text-lg text-base" />
-            </button>
+            </a>
             <a
               href={resume}
               download
