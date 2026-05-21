@@ -1,20 +1,14 @@
 import React, { useState } from "react";
 import { LuMusic, LuMoon, LuSun } from "react-icons/lu";
-import {
-  BiHomeAlt,
-  BiUser,
-  BiAward,
-  BiCode,
-  BiBriefcaseAlt,
-  BiEnvelope,
-} from "react-icons/bi";
 import { RxCross2 } from "react-icons/rx";
 import { HiMiniBars2 } from "react-icons/hi2";
 import { useDispatch, useSelector } from "react-redux";
 import { toggleTheme, toggleMusic } from "../redux/slices/themeSlice";
+import { navItems } from "../data";
+import lg from "../assets/logo.png"
 
 const Navbar = () => {
-  const logo = "<aditya/>";
+  // const logo = `$ aditya`;
   const [mobileView, setMobileView] = useState(false);
 
   const theme = useSelector((store) => store.theme.theme);
@@ -28,41 +22,34 @@ const Navbar = () => {
   return (
     <header className="fixed top-4 left-4 right-4 z-50">
       <div className="max-w-7xl xl:mx-auto mx-0 md:mx-4 lg:mx-8 md:py-3 py-2 px-4 rounded-xl dark:bg-(--purple-950)/60 bg-(--purple-50)/60 backdrop-blur-md flex items-center justify-between border border-neutral-300/80 dark:border-neutral-700/80">
-        <div className="cursor-pointer md:text-xl text-lg font-semibold text-(--purple-500) dark:text-(--purple-400) font-code">
-          {logo}
-        </div>
+        <a
+          href="#home"
+          className="cursor-pointer md:text-xl text-lg font-semibold text-(--purple-500) dark:text-(--purple-400) font-code"
+        >
+          <img className="h-7" src={lg} alt="logo"/>
+        </a>
 
         <div className="md:flex hidden space-x-7.5 text-gray-500 dark:text-gray-400 text-sm">
-          <a href="#home" className="flex items-center gap-1 hover:text-(--purple-500) dark:hover:text-(--purple-400) transition-all">
-            <BiHomeAlt className="text-[16px]" />
-            <span>Home</span>
-          </a>
-          <a href="#about" className="flex items-center gap-1 hover:text-(--purple-500) dark:hover:text-(--purple-400) transition-all">
-            <BiUser className="text-[16px]" />
-            <span>About</span>
-          </a>
-          <a href="#skills" className="flex items-center gap-1 hover:text-(--purple-500) dark:hover:text-(--purple-400) transition-all">
-            <BiCode className="text-[16px]" />
-            <span>Skills</span>
-          </a>
-          <a href="#projects" className="flex items-center gap-1 hover:text-(--purple-500) dark:hover:text-(--purple-400) transition-all">
-            <BiBriefcaseAlt className="text-[16px]" />
-            <span>Projects</span>
-          </a>
-          {/* <a href="#experience" className="flex items-center gap-1 hover:text-(--purple-500) dark:hover:text-(--purple-400) transition-all">
-            <BiAward className="text-[16px]" />
-            <span >Experience</span>
-          </a> */}
-          <a href="#contact" className="flex items-center gap-1 hover:text-(--purple-500) dark:hover:text-(--purple-400) transition-all">
-            <BiEnvelope className="text-[16px]" />
-            <span>Contact</span>
-          </a>
+          {navItems.map((item) => {
+            const Icon = item.icon;
+
+            return (
+              <a
+                key={item.id}
+                href={item.link}
+                className="flex items-center gap-1 hover:text-(--purple-500) dark:hover:text-(--purple-400) transition-all"
+              >
+                <Icon className="text-[16px]" />
+                <span>{item.name}</span>
+              </a>
+            );
+          })}
         </div>
 
         <div className="flex items-center space-x-4">
           <span
             onClick={() => dispatch(toggleMusic())}
-            className={`hover:bg-(--purple-200)/50 dark:hover:bg-(--purple-700)/50 cursor-pointer p-2 rounded-full  ${
+            className={`hover:bg-(--purple-200)/50 dark:hover:bg-(--purple-700)/50 cursor-pointer p-2 rounded-full transition-all ease-in-out ${
               isPlaying
                 ? "dark:text-(--purple-400) text-(--purple-400) bg-(--purple-200)/50 dark:bg-(--purple-700)/50"
                 : "text-gray-500"
@@ -72,14 +59,14 @@ const Navbar = () => {
           </span>
           <span
             onClick={() => dispatch(toggleTheme())}
-            className={`hover:bg-(--purple-200)/50 dark:hover:bg-(--purple-700)/50 cursor-pointer ${theme === "light" ? "text-gray-500" : "text-yellow-600"} text-lg p-2 rounded-full`}
+            className={`hover:bg-(--purple-200)/50 dark:hover:bg-(--purple-700)/50 cursor-pointer transition-all ease-in-out ${theme === "light" ? "text-gray-500" : "text-yellow-600"} text-lg p-2 rounded-full`}
           >
             {theme === "light" ? <LuMoon /> : <LuSun />}
           </span>
 
           <span
             onClick={toggleMobileView}
-            className=" hover:bg-(--purple-200)/50 dark:hover:bg-(--purple-700)/50 block md:hidden text-gray-500 dark:text-gray-400/80 text-xl cursor-pointer p-2 rounded-full"
+            className=" hover:bg-(--purple-200)/50 dark:hover:bg-(--purple-700)/50 block md:hidden transition-all ease-in-out text-gray-500 dark:text-gray-400/80 text-xl cursor-pointer p-2 rounded-full"
           >
             {mobileView ? <RxCross2 /> : <HiMiniBars2 />}
           </span>
@@ -89,33 +76,20 @@ const Navbar = () => {
       {mobileView && (
         <div className="mt-4 max-w-7xl mx-auto py-3 px-4 rounded-xl dark:bg-(--purple-950)/60 bg-(--purple-50)/60 backdrop-blur-md md:flex lg:hidden items-center justify-between border border-neutral-300/80 dark:border-neutral-700/80">
           <div className="flex flex-col py-3 px-4 rounded-xl space-y-6 text-gray-500 dark:text-gray-400 text-sm">
-            <a href="#home" className="cursor-pointer flex items-center gap-1 hover:text-(--purple-500) dark:hover:text-(--purple-400) transition-all">
-              <BiHomeAlt className="text-[16px]" />
-              <span >Home</span>
-            </a>
-            <a href="#about" className="cursor-pointer flex items-center gap-1 hover:text-(--purple-500) dark:hover:text-(--purple-400) transition-all">
-              <BiUser className="text-[16px]" />
-              <span >About</span>
-            </a>
-            <a href="#skills" className="cursor-pointer flex items-center gap-1 hover:text-(--purple-500) dark:hover:text-(--purple-400) transition-all">
-              <BiCode className="text-[16px]" />
-              <span >Skills</span>
-            </a>
-            <a href="#projects" className="cursor-pointer flex items-center gap-1 hover:text-(--purple-500) dark:hover:text-(--purple-400) transition-all">
-              <BiBriefcaseAlt className="text-[16px]" />
-              <span >Projects</span>
-            </a>
-            {/* <a href="#experience" className="cursor-pointer flex items-center gap-1 hover:text-(--purple-500) dark:hover:text-(--purple-400) transition-all">
-              <BiAward className="text-[16px]" />
-              <span >Experience</span>
-            </a> */}
-            <a
-              href="#contact"
-              className="cursor-pointer flex items-center gap-1 hover:text-(--purple-500) dark:hover:text-(--purple-400) transition-all"
-            >
-              <BiEnvelope className="text-[16px]" />
-              <span>Contact</span>
-            </a>
+            {navItems.map((item) => {
+              const Icon = item.icon;
+
+              return (
+                <a
+                  key={item.id}
+                  href={item.link}
+                  className="cursor-pointer flex items-center gap-1 hover:text-(--purple-500) dark:hover:text-(--purple-400) transition-all"
+                >
+                  <Icon className="text-[16px]" />
+                  <span>{item.name}</span>
+                </a>
+              );
+            })}
           </div>
         </div>
       )}

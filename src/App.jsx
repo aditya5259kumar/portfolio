@@ -2,10 +2,13 @@ import React, { useState, useEffect } from "react";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Bg from "./components/bg";
-import { useSelector } from "react-redux";
-import resonance from "./assets/resonance.m4a";
 import About from "./pages/About";
 import Skills from "./pages/Skills";
+import Projects from "./pages/Projects";
+import Contact from "./pages/Contact";
+import Footer from "./components/Footer";
+import { useSelector } from "react-redux";
+import resonance from "./assets/resonance.m4a";
 
 const App = () => {
   const theme = useSelector((store) => store.theme.theme);
@@ -36,55 +39,7 @@ const App = () => {
       <div className="fixed inset-0 z-0 bg-(--purple-50) dark:bg-(--purple-950)">
         {/* --------------------------------------------------------- */}
         <Bg />
-
-        {/* {theme === "light" ? (
-          <div
-            className="absolute inset-0 z-0 pointer-events-none"
-            style={{
-              backgroundImage: `
-        repeating-linear-gradient(0deg, transparent, transparent 19px, rgba(75, 85, 99, 0.08) 19px, rgba(75, 85, 99, 0.08) 20px, transparent 20px, transparent 39px, rgba(75, 85, 99, 0.08) 39px, rgba(75, 85, 99, 0.08) 40px),
-        repeating-linear-gradient(90deg, transparent, transparent 19px, rgba(75, 85, 99, 0.08) 19px, rgba(75, 85, 99, 0.08) 20px, transparent 20px, transparent 39px, rgba(75, 85, 99, 0.08) 39px, rgba(75, 85, 99, 0.08) 40px),
-        radial-gradient(circle at 20px 20px, rgba(55, 65, 81, 0.12) 2px, transparent 2px),
-        radial-gradient(circle at 40px 40px, rgba(55, 65, 81, 0.12) 2px, transparent 2px)
-      `,
-              backgroundSize: "40px 40px, 40px 40px, 40px 40px, 40px 40px",
-            }}
-          />
-        ) : (
-          <div
-            className="absolute inset-0 z-0 pointer-events-none"
-            style={{
-              backgroundImage: `
-      repeating-linear-gradient(
-        0deg,
-        transparent,
-        transparent 19px,
-        rgba(255, 255, 255, 0.06) 19px,
-        rgba(255, 255, 255, 0.06) 20px,
-        transparent 20px,
-        transparent 39px,
-        rgba(255, 255, 255, 0.06) 39px,
-        rgba(255, 255, 255, 0.06) 40px
-      ),
-      repeating-linear-gradient(
-        90deg,
-        transparent,
-        transparent 19px,
-        rgba(255, 255, 255, 0.06) 19px,
-        rgba(255, 255, 255, 0.06) 20px,
-        transparent 20px,
-        transparent 39px,
-        rgba(255, 255, 255, 0.06) 39px,
-        rgba(255, 255, 255, 0.06) 40px
-      ),
-      radial-gradient(circle at 20px 20px, rgba(255, 255, 255, 0.08) 2px, transparent 2px),
-      radial-gradient(circle at 40px 40px, rgba(255, 255, 255, 0.08) 2px, transparent 2px)
-    `,
-              backgroundSize: "40px 40px, 40px 40px, 40px 40px, 40px 40px",
-            }}
-          />
-        )} */}
-
+        <div className="absolute inset-0 h-full w-full bg-[linear-gradient(to_right,#80808020_1px,transparent_1px),linear-gradient(to_bottom,#80808020_1px,transparent_1px)] bg-size-[50px_50px]"></div>
         {/* --------------------------------------------------------- */}
       </div>
 
@@ -93,6 +48,9 @@ const App = () => {
         <Home />
         <About />
         <Skills />
+        <Projects />
+        <Contact />
+        <Footer />
       </div>
     </div>
   );

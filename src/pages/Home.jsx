@@ -7,26 +7,14 @@ import {
   BiSolidDownload,
 } from "react-icons/bi";
 import { IoArrowForward } from "react-icons/io5";
+import resume from "../assets/resume..pdf";
 
 const Home = () => {
   return (
     <section id="home" className="pt-34 lg:pt-38 ">
       <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-12 xl:px-0 md:flex-row flex-col flex md:items-center justify-between gap-y-12 md:gap-x-8 gap-x-12">
         <div className="flex-1 flex flex-col items-center md:items-start">
-          <span
-            className="
-  mb-2 text-xs w-fit px-4 py-1.5 md:py-2 rounded-full
-
-  bg-(--purple-100) 
-  text-(--purple-700) 
-  border border-(--purple-300)
-  dark:bg-(--purple-900)
-  dark:text-(--purple-300)
-  dark:border-(--purple-700)
-  shadow-lg
-  shadow-gray-300 dark:shadow-gray-700
-"
-          >
+          <span className="mb-2 text-xs w-fit px-4 py-1.5 md:py-2 rounded-full bg-(--purple-100) text-(--purple-700) border border-(--purple-300) dark:bg-(--purple-900) dark:text-(--purple-300) dark:border-(--purple-700)">
             Available for Opportunities
           </span>
           <h1 className="text-gray-800 dark:text-white text-6xl md:text-6xl lg:text-7xl md:my-6 my-4 font-extrabold">
@@ -38,13 +26,13 @@ const Home = () => {
           <TypeAnimation
             sequence={[
               "Frontend with React",
-              1000,
+              2000,
               "Backend with Node & Express",
-              1000,
+              2000,
               "MongoDB & MySQL",
-              1000,
+              2000,
               "End-to-End Web Applications",
-              1000,
+              2000,
             ]}
             speed={60}
             repeat={Infinity}
@@ -61,43 +49,20 @@ const Home = () => {
 
           <div className="flex items-center space-x-4  ">
             <button
-              className="
-flex items-center gap-2
-px-4 py-3 md:px-6 md:py-3
-text-sm md:text-base font-medium
-rounded-lg text-white
-bg-linear-to-r from-(--purple-800) dark:from-(--purple-700) to-(--purple-500)
-shadow-lg
-  shadow-gray-300 dark:shadow-gray-700
-transition-all duration-200 cursor-pointer"
+              href="#projects"
+              className="flex items-center gap-2 px-4 py-3 md:px-6 md:py-3 bg-linear-to-r from-(--purple-800) dark:from-(--purple-700) to-(--purple-500) text-sm md:text-base font-medium rounded-lg text-white cursor-pointer"
             >
               <span>View Projects</span>{" "}
               <IoArrowForward className="font-bold -rotate-45 md:text-lg text-base" />
             </button>
-            <button
-              className="
-flex items-center gap-2
-px-4 py-3 md:px-6 md:py-3
-text-sm md:text-base font-medium
-rounded-lg
-
-border border-(--purple-300)
-text-(--purple-700)
-bg-(--purple-100)
-
-dark:border-(--purple-700)
-dark:text-(--purple-300)
-dark:bg-(--purple-900)
-
-hover:bg-(--purple-200)
-dark:hover:bg-(--purple-800)
-
-transition-all duration-200 cursor-pointer
-"
+            <a
+              href={resume}
+              download
+              className="flex items-center gap-2 px-4 py-3 md:px-6 md:py-3 text-sm md:text-base font-medium rounded-lg border border-(--purple-300) text-(--purple-700) bg-(--purple-100) dark:border-(--purple-700) dark:text-(--purple-300) dark:bg-(--purple-900) hover:bg-(--purple-200) dark:hover:bg-(--purple-800) transition-all duration-200 cursor-pointer"
             >
               <span>Get Resume</span>{" "}
               <BiSolidDownload className="md:text-lg text-base" />
-            </button>
+            </a>
           </div>
         </div>
 
