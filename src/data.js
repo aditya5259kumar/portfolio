@@ -89,7 +89,7 @@ export const contactItems = [
   {
     id: 2,
     title: "LinkedIn",
-    value: "www.linkedin.com/in/aditya5259kumar/",
+    value: "linkedin.com/in/aditya5259kumar/",
     icon: FaLinkedinIn,
     url: "https://www.linkedin.com/in/aditya5259kumar/",
   },
