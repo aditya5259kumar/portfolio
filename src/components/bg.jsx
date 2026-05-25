@@ -20,13 +20,13 @@ export default function Bg() {
   return (
     <div
       className="absolute inset-0 bg-black"
-        style={{
-          background: `radial-gradient(
+      style={{
+        background: `radial-gradient(
         circle at ${pos.x}% ${pos.y}%,
         var(${theme === "light" ? "--purple-200" : "--purple-800"}),
         transparent 40%
       )`,
-        }}
+      }}
     />
   );
 }

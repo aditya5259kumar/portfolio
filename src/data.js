@@ -7,6 +7,7 @@ import tailwind from "./assets/tailwindcss.svg";
 import motion from "./assets/motion.svg";
 import white_motion from "./assets/white_motion.png";
 import render from "./assets/render.svg";
+import render_dark from "./assets/render-dark.png";
 import node from "./assets/nodejs.svg";
 import ex_light from "./assets/expressjs-light.svg";
 import ex_dark from "./assets/expressjs-dark.svg";
@@ -42,20 +43,15 @@ export const navItems = [
     link: "#home",
     icon: BiHomeAlt,
   },
+
   {
     id: 2,
-    name: "About",
-    link: "#about",
-    icon: BiUser,
-  },
-  {
-    id: 3,
     name: "Skills",
     link: "#skills",
     icon: BiCode,
   },
   {
-    id: 4,
+    id: 3,
     name: "Projects",
     link: "#projects",
     icon: BiBriefcaseAlt,
@@ -67,7 +63,13 @@ export const navItems = [
   //     icon: BiAward,
   //   },
   {
-    id: 6,
+    id: 4,
+    name: "About",
+    link: "#about",
+    icon: BiUser,
+  },
+  {
+    id: 5,
     name: "Contact",
     link: "#contact",
     icon: BiEnvelope,
@@ -96,7 +98,7 @@ export const contactItems = [
     title: "Email",
     value: "aditya5259kumar@gmail.com",
     icon: BiEnvelope,
-    url: "https://mail.google.com/mail/?view=cm&fs=1&to=aditya5259kumar@gmail.com"
+    url: "https://mail.google.com/mail/?view=cm&fs=1&to=aditya5259kumar@gmail.com",
   },
   {
     id: 4,
@@ -175,46 +177,142 @@ export const skillsData = [
         lightIcon: vercel_dark,
         darkIcon: vercel_light,
       },
-      { name: "Render", icon: render },
+      { name: "Render", lightIcon: render, darkIcon: render_dark },
     ],
   },
 ];
 
 // ==========================================================================================
 
-import project_image from "./assets/photo-1502920917128-1aa500764cbd.jpg";
+import notely from "./assets/notely.jpg";
+import taskMelt from "./assets/taskMelt.jpg";
+import beog from "./assets/beog.jpg";
+import linkup from "./assets/linkup.jpg";
 
 export const projects = [
   {
     id: 1,
-    title: "Knest — AI Second Brain",
-    description:
-      "AI-powered tool that connects notes, remembers context, and helps plan workflows.",
 
+    title: "Linkup",
+
+    description:
+      "A real-time chat platform built with Socket.IO, React, Express, and MySQL featuring live messaging, typing indicators, presence tracking, and Redux state management.",
     features: [
-      "Context-aware AI memory system",
-      "Workflow planning and task linking",
+      "Real-time one-to-one messaging using Socket.IO",
+      "Live typing indicators and online presence synchronization",
+      "Dynamic user discovery and instant conversation initiation",
+      "JWT authentication with Redux-powered client state management",
     ],
 
-    image: project_image,
+    image: linkup,
 
     techStack: [
       "React",
-      "Next.js",
-      "Tailwind",
+      "Tailwind CSS",
+      "Redux Toolkit",
       "Node.js",
       "Express.js",
       "MySQL",
-      "Framer Motion",
-      "GSAP",
-      "Docker",
-      "Redis",
-      "Nest.js",
-      "Chakra UI",
+      "Socket.IO",
+      "JWT",
     ],
 
-    liveDemo: "https://your-live-demo-link.com",
+    liveDemo: "Currently in development",
 
-    sourceCode: "https://github.com/yourusername/project",
+    sourceCode: "https://github.com/aditya5259kumar/fullstack-chat-app",
+  },
+  {
+    id: 2,
+
+    title: "BEOG",
+
+    description:
+      "A feature-rich MERN blogging platform with dynamic author systems, multi-image content publishing, Redux state management, and scalable backend architecture.",
+    features: [
+      "JWT authentication with protected API routes",
+      "Rich text blog publishing with multi-image uploads using Multer",
+      "Dynamic author system with profile-based content discovery",
+      "Category filtering, blog engagement tracking, and Redux-powered state management",
+    ],
+
+    image: beog,
+
+    techStack: [
+      "React",
+      "Redux Toolkit",
+      "PrimeReact",
+      "Tailwind CSS",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "JWT",
+      "Multer",
+    ],
+
+    liveDemo: "https://mern-blog-app-mu-ecru.vercel.app/",
+
+    sourceCode: "https://github.com/aditya5259kumar/mern-blog-app",
+  },
+
+  {
+    id: 3,
+
+    title: "Notely",
+
+    description:
+      "A full-stack MERN note-taking application featuring JWT authentication, protected API routes, note pinning, and real-time search with an MVC backend architecture.",
+
+    features: [
+      "Secure JWT authentication and authorization",
+      "RESTful API with MVC architecture",
+      "Create, manage, pin, and search personal notes",
+      "Responsive frontend with protected user dashboards",
+    ],
+
+    techStack: [
+      "React",
+      "Tailwind CSS",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "JWT",
+    ],
+
+    image: notely,
+
+    liveDemo: "https://note-app-five-lilac.vercel.app/",
+
+    sourceCode: "https://github.com/aditya5259kumar/fullstack-Note-app",
+  },
+  {
+    id: 4,
+
+    title: "TaskMelt",
+
+    description:
+      "A task management application built with React, Express, and MySQL featuring JWT authentication, protected routes, Context API state management, and MVC architecture.",
+
+    features: [
+      "Secure JWT authentication and user-specific task access",
+      "MySQL relational database integration with RESTful APIs",
+      "Global state management using React Context API",
+      "Task completion tracking with responsive dashboard UI",
+    ],
+
+    image: taskMelt,
+
+    techStack: [
+      "React",
+      "Tailwind CSS",
+      "Context API",
+      "Node.js",
+      "Express.js",
+      "MySQL",
+      "JWT",
+    ],
+
+    liveDemo: "https://fullstack-todo-app-nu.vercel.app/",
+
+    sourceCode: "https://github.com/aditya5259kumar/fullstack-Todo-app",
   },
 ];
