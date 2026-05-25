@@ -248,7 +248,7 @@ const Contact = () => {
                       delay: index * 0.1,
                     }}
                     viewport={{ once: true }}
-                    className="py-3 px-2 sm:px-4 flex items-center gap-2 sm:gap-4 border border-neutral-300/80 dark:border-neutral-700/80 rounded-xl dark:bg-(--purple-950)/70 bg-(--purple-50)/70"
+                    className="py-3 px-4 flex items-center gap-4 border border-neutral-300/80 dark:border-neutral-700/80 rounded-xl dark:bg-(--purple-950)/70 bg-(--purple-50)/70"
                   >
                     <motion.a
                       href={item.url || undefined}
@@ -265,7 +265,7 @@ const Contact = () => {
                         {item.title}
                       </span>
 
-                      <p className="text-gray-600 dark:text-gray-400 sm:text-sm text-xs">
+                      <p className="text-gray-600 dark:text-gray-400 sm:text-sm text-[14px]">
                         {item.value}
                       </p>
                     </div>
