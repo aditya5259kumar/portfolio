@@ -74,7 +74,7 @@ const Contact = () => {
   return (
     <motion.section
       id="contact"
-      className="pt-34 lg:pt-45 pb-15 lg:pb-30"
+      className="pt-34 lg:pt-45 pb-15 lg:pb-30 overflow-x-clip"
       initial={{ opacity: 0, y: 80 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}

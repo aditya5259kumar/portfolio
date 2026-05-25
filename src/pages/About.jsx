@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const About = () => {
   return (
-    <section id="about" className="pt-34 lg:pt-45">
+    <section id="about" className="pt-34 lg:pt-45 overflow-x-clip">
       <div className="max-w-7xl mx-auto px-4 md:px-8 lg:px-12 xl:px-0">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -34,13 +34,13 @@ const About = () => {
           ></motion.div>
         </motion.div>
 
-        <div className="flex flex-col md:flex-row items-start gap-y-12 md:gap-x-8 gap-x-12">
+        <div className="flex flex-col md:flex-row items-start gap-y-12 md:gap-x-8 gap-x-12 overflow-hidden">
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
+            initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7 }}
             viewport={{ once: true }}
-            className="flex-1 border-l-2 border-(--purple-400) pl-4 py-2"
+            className="flex-1 overflow-hidden border-l-2 border-(--purple-400) pl-4 py-2"
           >
             <motion.p
               initial={{ opacity: 0 }}
@@ -79,16 +79,15 @@ const About = () => {
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
+            initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7 }}
             viewport={{ once: true }}
-            className="flex flex-1 flex-col gap-5 w-full text-center md:w-1/2"
+            className="flex flex-1 overflow-hidden flex-col gap-5 w-full text-center md:w-1/2"
           >
             <motion.div
               whileHover={{
-                y: -6,
-                scale: 1.02,
+                y: -4,
               }}
               whileTap={{ scale: 0.98 }}
               transition={{ duration: 0.2 }}
@@ -105,8 +104,7 @@ const About = () => {
 
             <motion.div
               whileHover={{
-                y: -6,
-                scale: 1.02,
+                y: -4,
               }}
               whileTap={{ scale: 0.98 }}
               transition={{ duration: 0.2 }}
@@ -123,8 +121,7 @@ const About = () => {
 
             <motion.div
               whileHover={{
-                y: -6,
-                scale: 1.02,
+                y: -4,
               }}
               whileTap={{ scale: 0.98 }}
               transition={{ duration: 0.2 }}
