@@ -74,7 +74,7 @@ export default function ProjectCard({ project }) {
         <div className="flex justify-end gap-4 items-center mt-6">
           {project.liveDemo === "Currently in development" ? (
             <span className="px-4 py-2 rounded-lg text-sm font-medium bg-gray-300 text-gray-600 dark:bg-gray-700 dark:text-gray-300 select-none opacity-80">
-              Coming Soon
+              Available Soon
             </span>
           ) : (
             <motion.a

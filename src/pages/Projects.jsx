@@ -41,7 +41,7 @@ const Projects = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
             viewport={{ once: true }}
-            className="text-lg text-center font-medium text-gray-700 dark:text-gray-400 leading-relaxed pt-4"
+            className="text-base md:text-lg text-center font-medium text-gray-700 dark:text-gray-400 leading-relaxed pt-4"
           >
             A showcase of my recent work, from concept to deployment
           </motion.p>

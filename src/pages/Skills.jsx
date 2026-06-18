@@ -42,7 +42,7 @@ const Skills = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
             viewport={{ once: true }}
-            className="text-lg font-medium text-gray-700 dark:text-gray-400 leading-relaxed pt-4"
+            className="text-base md:text-lg font-medium text-gray-700 dark:text-gray-400 leading-relaxed pt-4"
           >
             Technologies and tools I work with.
           </motion.p>

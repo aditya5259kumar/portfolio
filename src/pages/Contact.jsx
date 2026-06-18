@@ -114,7 +114,7 @@ const Contact = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.6 }}
             viewport={{ once: true }}
-            className="text-lg text-center font-medium text-gray-700 dark:text-gray-400 leading-relaxed pt-4"
+            className="text-base md:text-lg text-center font-medium text-gray-700 dark:text-gray-400 leading-relaxed pt-4"
           >
             Have an opportunity or project in mind? Send a quick message - I
             usually respond within 24 hours.

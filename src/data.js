@@ -193,15 +193,15 @@ export const projects = [
   {
     id: 1,
 
-    title: "Linkup",
+    title: "LinkUp — Real-Time Chat Application",
 
     description:
-      "A real-time chat platform built with Socket.IO, React, Express, and MySQL featuring live messaging, typing indicators, presence tracking, and Redux state management.",
+      "A real-time messaging platform with private chats, presence tracking, read receipts, typing indicators, file sharing, and conversation management.",
     features: [
-      "Real-time one-to-one messaging using Socket.IO",
-      "Live typing indicators and online presence synchronization",
-      "Dynamic user discovery and instant conversation initiation",
-      "JWT authentication with Redux-powered client state management",
+      "Real-time private messaging with Socket.IO",
+      "Typing indicators, presence tracking, and read receipts",
+      "Image and file sharing with unread message counters",
+      "User discovery, chat search, and conversation management",
     ],
 
     image: linkup,
@@ -215,16 +215,18 @@ export const projects = [
       "MySQL",
       "Socket.IO",
       "JWT",
+      "Multer",
+      "Nodemailer",
     ],
 
     liveDemo: "Currently in development",
 
-    sourceCode: "https://github.com/aditya5259kumar/fullstack-chat-app",
+    sourceCode: "https://github.com/yourusername/linkup",
   },
   {
-    id: 2,
+    id: 3,
 
-    title: "BEOG",
+    title: "BEOG — MERN Blogging Platform",
 
     description:
       "A feature-rich MERN blogging platform with dynamic author systems, multi-image content publishing, Redux state management, and scalable backend architecture.",
@@ -255,9 +257,9 @@ export const projects = [
   },
 
   {
-    id: 3,
+    id: 4,
 
-    title: "Notely",
+    title: "Notely — MERN Notes App",
 
     description:
       "A full-stack MERN note-taking application featuring JWT authentication, protected API routes, note pinning, and real-time search with an MVC backend architecture.",
@@ -285,9 +287,9 @@ export const projects = [
     sourceCode: "https://github.com/aditya5259kumar/fullstack-Note-app",
   },
   {
-    id: 4,
+    id: 5,
 
-    title: "TaskMelt",
+    title: "TaskMelt — Full Stack Todo App",
 
     description:
       "A task management application built with React, Express, and MySQL featuring JWT authentication, protected routes, Context API state management, and MVC architecture.",
