@@ -221,7 +221,7 @@ export const projects = [
 
     liveDemo: "Currently in development",
 
-    sourceCode: "https://github.com/yourusername/linkup",
+    sourceCode: "https://github.com/aditya5259kumar/fullstack-chat-app",
   },
   {
     id: 3,
