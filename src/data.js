@@ -219,7 +219,7 @@ export const projects = [
       "Nodemailer",
     ],
 
-    liveDemo: "Currently in development",
+    liveDemo: "https://fullstack-chat-app-seven-lac.vercel.app/",
 
     sourceCode: "https://github.com/aditya5259kumar/fullstack-chat-app",
   },
